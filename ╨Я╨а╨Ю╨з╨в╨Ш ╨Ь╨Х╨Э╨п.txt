@@ -1,0 +1,16 @@
+IR-TRUCK на GitHub Pages
+=== Вариант 1. Только попробовать (за 5 минут) ===
+1. Зайдите на github.com, нажмите "New repository", назовите, например, irtruck, сделайте Public, нажмите "Create".
+2. Нажмите "uploading an existing file" и перетащите ВСЕ файлы из этой папки (index.html, config.js, sb.js, setup.sql). Нажмите "Commit changes".
+3. Settings -> Pages -> Source: "Deploy from a branch", Branch: main, папка / (root) -> Save.
+4. Через 1-2 минуты сайт будет по адресу https://ВАШЛОГИН.github.io/irtruck/
+В этом варианте данные хранятся только в браузере (общей базы нет).
+
+=== Вариант 2. Общая база для всех устройств (Supabase, бесплатно) ===
+1. Зарегистрируйтесь на supabase.com, создайте проект (New project), запомните пароль базы.
+2. SQL Editor -> New query -> вставьте содержимое setup.sql -> Run.
+3. Authentication -> Sign In / Providers (Email): выключите "Allow new users to sign up" (чтобы посторонние не регистрировались).
+4. Authentication -> Users -> Add user: создайте логин (email) и пароль для каждого сотрудника, отметьте Auto Confirm User.
+5. Project Settings -> API: скопируйте "Project URL" и ключ "anon public". Вставьте их в config.js вместо пустых кавычек, загрузите config.js в GitHub заново (заменить файл).
+6. Откройте сайт, войдите email и паролем. Данные теперь общие на всех устройствах. Раз в неделю делайте резервную копию (вкладка История).
+Бесплатный Supabase "засыпает" после недели без активности и не делает автоматических копий.
